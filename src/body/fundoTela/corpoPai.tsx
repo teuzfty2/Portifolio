@@ -1,20 +1,21 @@
-import { div } from "framer-motion/client";
-import LuzMouse from "./planoFundo";
+import MenuDireito from "./MenuDireito/menuDireito";
+import MenuEsquerdo from "./MenuEsquerdo/menuEsquerdo";
+import LuzMouse from "./luzMouse";
 
 export default function CorpoPai() {
   // Plano de fundo
   return (
     <div className="flex min-h-screen w-full bg-gradient-to-b from-[#0f1729] to-[#0f1729]  text-white">
-      <LuzMouse />
-      {/* Titulo nome esquerda*/}
-      <div className="flex rounded-lg w-full justify-center items-center  h-full  bg-gray-700 border border-none">
-        <h1 className="text-4xl font-bold tracking-tight text-slate-200">
-          Matheus Filipe
-        </h1>
-      </div>
-      {/* Titulo nome direita*/}
-      <div className="flex justify-center w-full  bg-[#0f1729] border border-none">
-        <h1>Explicações</h1>
+      <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-16 lg:py-0">
+        <div className="lg:flex lg:justify-between lg:gap-4">
+          <LuzMouse />
+          <div className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between lg:py-24">
+            <MenuEsquerdo />
+          </div>
+          <div className="pt-24 lg:w-[52%] lg:py-24" id="content">
+            <MenuDireito />
+          </div>
+        </div>
       </div>
     </div>
   );
