@@ -1,6 +1,10 @@
 import { useEffect, useRef } from "react";
 
-export default function LuzMouse() {
+interface LuzMouseProps {
+  className?: string;
+}
+
+export default function LuzMouse({ className }: LuzMouseProps) {
   const luzRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -22,7 +26,7 @@ export default function LuzMouse() {
   }, []);
 
   return (
-    <div className="pointer-events-none fixed inset-0 z-50 overflow-hidden mix-blend-screen">
+    <div className={`pointer-events-none fixed inset-0 z-50 overflow-hidden mix-blend-screen ${className || ""}`}>
       <div
         ref={luzRef}
         className="absolute w-[400px] h-[400px] bg-[#3151a1b6] opacity-10 rounded-full blur-[80px]"
