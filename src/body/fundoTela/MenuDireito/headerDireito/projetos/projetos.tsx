@@ -42,6 +42,9 @@ export default function Projetos() {
                             <span className="bg-[#122e47] text-[#57d9cc] px-2 py-1 rounded-3xl">
                                 Tailwind
                             </span>
+                            <span className="bg-[#122e47] text-[#57d9cc] px-2 py-1 rounded-3xl">
+                                Css
+                            </span>
                         </div>
                     </div>
                 </div>

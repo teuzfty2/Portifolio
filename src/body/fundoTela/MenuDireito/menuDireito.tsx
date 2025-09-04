@@ -1,5 +1,5 @@
 //Componentes
-import Sobre from "./sobre.tsx";
+import Sobre from "./headerDireito/sobre/sobre.tsx";
 import Experiencia from "./headerDireito/experiencias/desenvolvedor.tsx";
 import Estoquista from "./headerDireito/experiencias/estoquista.tsx";
 import OfficeBoy from "./headerDireito/experiencias/officeBoy.tsx";
