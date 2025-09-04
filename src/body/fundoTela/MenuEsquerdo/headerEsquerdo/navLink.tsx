@@ -13,8 +13,11 @@ export default function NavLink({ text, targetId }: NavLinkProps) {
       const section = document.getElementById(targetId);
       if (section) {
         const rect = section.getBoundingClientRect();
-        // Se a seção estiver visível na tela
-        setIsActive(rect.top <= 100 && rect.bottom > 100);
+        const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+        // Mantém ativo enquanto parte da seção estiver visível
+        const isVisible = rect.top < windowHeight * 0.2 && rect.bottom > windowHeight * 0.2;
+        setIsActive(isVisible);
       }
     };
 
@@ -38,7 +41,6 @@ export default function NavLink({ text, targetId }: NavLinkProps) {
       onClick={handleClick}
       className="group flex items-center py-3 w-max"
     >
-      {/* Barra animada */}
       <span
         className={`
           nav-indicator mr-4 h-px w-8 transition-all duration-300
@@ -47,7 +49,6 @@ export default function NavLink({ text, targetId }: NavLinkProps) {
         `}
       ></span>
 
-      {/* Texto animado */}
       <span
         className={`
           nav-text text-xs font-bold uppercase tracking-widest transition-colors duration-300

@@ -1,13 +1,13 @@
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import MenuDireito from "./MenuDireito/menuDireito";
 import MenuEsquerdo from "./MenuEsquerdo";
-import LuzMouse from "./LuzMouse";
+import LuzMouse from "./luzMouse";
 
 export default function CorpoPai() {
   const [hasMouse, setHasMouse] = useState(false);
 
   useEffect(() => {
-    // Detecta se há suporte a hover (mouse)
     const mql = window.matchMedia("(hover: hover)");
     setHasMouse(mql.matches);
 
@@ -18,23 +18,35 @@ export default function CorpoPai() {
   }, []);
 
   return (
-    <div className="flex min-h-screen w-full bg-gradient-to-b from-[#0f1729] to-[#0f1729] text-white">
+    <div className="flex min-h-screen w-full bg-gradient-to-b from-[#0f1729] to-[#0f1729] text-white select-none">
       <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-16 lg:py-0">
-        <div className="lg:flex lg:justify-between lg:gap-4">
+        <div className="lg:flex lg:justify-start lg:gap-4"> {/* gap menor e justify-start */}
           {/* LuzMouse só em dispositivos com mouse */}
           {hasMouse && <LuzMouse />}
 
-          {/* Menu esquerdo */}
-          <div className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between lg:py-24">
+          {/* Menu esquerdo animado */}
+          <motion.div
+            className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between lg:py-24"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
             <MenuEsquerdo />
-          </div>
+          </motion.div>
 
-          {/* Conteúdo direito */}
-          <div className="pt-24 lg:w-[52%] lg:py-24" id="content">
+          {/* Conteúdo direito animado */}
+          <motion.div
+            className="pt-24 lg:w-[52%] lg:py-24"
+            id="content"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
             <MenuDireito />
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
   );
+
 }

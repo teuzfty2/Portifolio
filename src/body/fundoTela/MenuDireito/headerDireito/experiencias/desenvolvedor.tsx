@@ -2,9 +2,12 @@ export default function Experiencia() {
   return (
     <section
       id="experiencia"
-      className="mb-16 mt-10 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
+      className="mb-16 mt-10 scroll-mt-2 md:mb-24 lg:mb-6 lg:scroll-mt-24 hover:shadow-lg"
       aria-label="Experiência profissional"
     >
+        <div className="mb-6 text-[#ffff] font-bold font-sans text-2xl">
+          Experiência
+        </div>
       <a
         href="https://watools.com.br/"
         target="_blank"
