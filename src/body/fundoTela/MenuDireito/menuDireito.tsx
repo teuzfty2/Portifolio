@@ -9,6 +9,7 @@ import Git from "./headerDireito/formacoes/git.tsx";
 import NodeJS from "./headerDireito/formacoes/node.tsx";
 import Projetos from "./headerDireito/projetos/projetos.tsx";
 import RodaPeDireito from "./rodaPeDireito.tsx";
+import React from "./headerDireito/formacoes/react.tsx";
 
 const sections = [
     { id: "sobre", title: "Sobre" },
@@ -42,7 +43,8 @@ export default function MenuDireito() {
                     <JavaScript/>
                     <HtmlCss/>
                     <Git/>
-                    <NodeJS/>               
+                    <NodeJS/>  
+                    <React/>            
                 </section>
             </div>
             <div>

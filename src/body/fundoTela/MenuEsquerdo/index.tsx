@@ -6,7 +6,7 @@ export default function MenuEsquerdo() {
     <div className="flex flex-col h-screen">
       {/* Bloco superior */}
       <div className="">
-        <div className="text-7xl font-bold tracking-tight text-slate-200 sm:text-5xl">
+        <div className="text-7xl mb-2 font-bold tracking-tight text-slate-200 sm:text-5xl">
           Matheus Filipe
         </div>
         <span className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">
