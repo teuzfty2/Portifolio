@@ -1,5 +1,6 @@
 // Ícones
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function RodaPe() {
     return (
@@ -34,7 +35,7 @@ export default function RodaPe() {
                     </li>
                     <li className="mr-5 shrink-0 text-2xl">
                         <a
-                            href="https://www.instagram.com/teuzfty/"
+                            href="https://www.instagram.com/teuz.dev/"
                             title="Instagram"
                             aria-label="Instagram (abre em nova aba)"
                             rel="noreferrer noopener"
@@ -42,6 +43,20 @@ export default function RodaPe() {
                             className="flex items-center gap-1 text-slate-400 hover:text-white transition-colors"
                         >
                             <FaInstagram />
+
+                        </a>
+                    </li>
+
+                     <li className="mr-5 shrink-0 text-2xl">
+                        <a
+                            href="https://wa.me/5531997893076"
+                            title="WhatsApp"
+                            aria-label="Instagram (abre em nova aba)"
+                            rel="noreferrer noopener"
+                            target="_blank"
+                            className="flex items-center gap-1 text-slate-400 hover:text-white transition-colors"
+                        >
+                            <FaWhatsapp />
 
                         </a>
                     </li>
