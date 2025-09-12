@@ -10,10 +10,10 @@ export default function MenuEsquerdo() {
           Matheus Filipe
         </div>
         <span className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">
-          Desenvolvedor Junior
+         Software Developer (Júnior)
         </span>
         <p className="mt-4 text-md max-w-xs leading-normal text-[#8b9aad]">
-          Transformo ideias em interfaces web simples, acessíveis e visualmente consistentes.
+          Sou desenvolvedor júnior em início de carreira, focado em aprender e evoluir em tecnologias front-end e back-end, com experiência em: React | Node.js | JavaScript | TypeScript | HTML&CSS | Tailwind.
         </p>
       </div>
 

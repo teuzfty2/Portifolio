@@ -10,6 +10,9 @@ import NodeJS from "./headerDireito/formacoes/node.tsx";
 import Projetos from "./headerDireito/projetos/projetos.tsx";
 import RodaPeDireito from "./rodaPeDireito.tsx";
 import React from "./headerDireito/formacoes/react.tsx";
+import Faculdade from "./headerDireito/formacoes/faculdade.tsx";
+import CursoAlura from "./headerDireito/formacoes/cursoAlura.tsx";
+import FaculdadeBack from "./headerDireito/formacoes/faculdadeBack.tsx";
 
 const sections = [
     { id: "sobre", title: "Sobre" },
@@ -45,6 +48,9 @@ export default function MenuDireito() {
                     <Git/>
                     <NodeJS/>  
                     <React/>            
+                    <Faculdade/>
+                    <CursoAlura/>
+                    <FaculdadeBack/>
                 </section>
             </div>
             <div>
